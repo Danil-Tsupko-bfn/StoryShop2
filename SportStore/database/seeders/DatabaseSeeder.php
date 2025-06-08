@@ -18,18 +18,33 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
+        $this->call(CategoriesTableSeeder::class);
 
-//        $categories = Category::all();
-//        Product::factory(30)->create()->each(function ($product) use ($categories) {
-//            $product->categories()->attach(
-//                $categories->random(rand(1, 3))->pluck('id')->toArray()
-//            );
-//        });
-        User::factory()->create([
-            'name' => 'Admin',
-            'email' => 'gert.iopru@gmail.com',
-            'password' => Hash::make('0987654'),
-            'is_admin' => true
-        ]);
+        $this->call(FailedJobsTableSeeder::class);
+
+        $this->call(ProductsTableSeeder::class);
+
+        $this->call(CategoryProductTableSeeder::class);
+
+        $this->call(MigrationsTableSeeder::class);
+
+        $this->call(OrderItemsTableSeeder::class);
+
+        $this->call(OrdersTableSeeder::class);
+
+        $this->call(PasswordResetTokensTableSeeder::class);
+
+        $this->call(PersonalAccessTokensTableSeeder::class);
+
+
+        $this->call(UsersTableSeeder::class);
+
+        User::updateOrCreate(
+            ['email' => 'gert.iopru@gmail.com'],
+            [
+                'name' => 'Admin',
+                'password' => Hash::make('0987654'),
+                'is_admin' => true
+            ]);
     }
 }
