@@ -46,5 +46,8 @@ class DatabaseSeeder extends Seeder
                 'password' => Hash::make('0987654'),
                 'is_admin' => true
             ]);
+        $this->call(BillingDetailsTableSeeder::class);
+        $this->call(SubscriptionItemsTableSeeder::class);
+        $this->call(SubscriptionsTableSeeder::class);
     }
 }
