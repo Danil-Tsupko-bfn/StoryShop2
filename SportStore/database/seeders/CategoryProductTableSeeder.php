@@ -29,6 +29,46 @@ class CategoryProductTableSeeder extends Seeder
                 'category_id' => 2,
                 'product_id' => 2,
             ),
+            2 => 
+            array (
+                'category_id' => 2,
+                'product_id' => 3,
+            ),
+            3 => 
+            array (
+                'category_id' => 2,
+                'product_id' => 4,
+            ),
+            4 => 
+            array (
+                'category_id' => 1,
+                'product_id' => 5,
+            ),
+            5 => 
+            array (
+                'category_id' => 1,
+                'product_id' => 6,
+            ),
+            6 => 
+            array (
+                'category_id' => 5,
+                'product_id' => 7,
+            ),
+            7 => 
+            array (
+                'category_id' => 5,
+                'product_id' => 8,
+            ),
+            8 => 
+            array (
+                'category_id' => 6,
+                'product_id' => 9,
+            ),
+            9 => 
+            array (
+                'category_id' => 6,
+                'product_id' => 10,
+            ),
         ));
         
         
