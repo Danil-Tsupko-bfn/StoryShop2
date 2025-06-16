@@ -45,6 +45,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard/invoice/pdf/{order}', [Dashboard::class, 'invoicePdf'])->name('invoice.pdf');
     Route::get('/dashboard', [Dashboard::class, 'render'])->name('dashboard');
 });
+Route::get('lang/{locale}', function ($locale) {
+    if (!in_array($locale, ['en', 'uk'])) {
+        abort(400);
+    }
+    session(['locale' => $locale]);
+    return redirect()->back();
+})->name('lang.switch');
+
 
 
 require __DIR__.'/auth.php';
