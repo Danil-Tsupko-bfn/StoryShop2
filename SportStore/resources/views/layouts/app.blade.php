@@ -18,6 +18,8 @@
 </head>
 
 <body class="font-sans antialiased">
+<a href="{{ route('lang.switch', ['locale' => 'uk']) }}">UA</a>
+<a href="{{ route('lang.switch', ['locale' => 'en']) }}">EN</a>
 <!-- Language Switcher -->
 <!--<div class="fixed top-6 left-6 z-50">
     <div x-data="{ open: false }" class="relative">
